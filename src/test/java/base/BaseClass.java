@@ -2,6 +2,8 @@ package base;
 
 import java.time.Duration;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -15,7 +17,7 @@ public class BaseClass {
 
 // ----------create objects of webdriver and read config class----------------
 	public static WebDriver driver;
-	// public static Logger logger;
+	public static Logger logger;
 
 	ReadConfig readConfig = new ReadConfig();
 
@@ -33,22 +35,23 @@ public class BaseClass {
 
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
+			driver.manage().window().maximize();
 			driver.get(url);
 
 		} else if (browserName.equalsIgnoreCase("firefox")) {
 
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
+			driver.manage().window().maximize();
 			driver.get(url);
 
 		}
 
 // -----------implicitly wait of 10 sec.----------------
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		driver.manage().window().maximize();
 
 //----------------initialize the logger object----------------
-		// logger = LogManager.getLogger("com.webAutomation");
+		logger = LogManager.getLogger("TestAutomationFrameWork");
 	}
 
 	@AfterClass

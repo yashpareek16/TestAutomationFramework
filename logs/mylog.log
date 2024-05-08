@@ -1,0 +1,4 @@
+00:04:20.808 [main] INFO  TestAutomationFrameWork - Successfully clicked on the signIn.
+00:04:21.153 [main] INFO  TestAutomationFrameWork - Successfully Entered the Email Id.
+00:04:21.318 [main] INFO  TestAutomationFrameWork - Successfully Clicked On The Submit Button.
+00:04:21.337 [main] INFO  TestAutomationFrameWork - Successfully Verify The Page Title of login My shop page.

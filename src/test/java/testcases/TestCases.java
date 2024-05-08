@@ -1,7 +1,5 @@
 package testcases;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.*;
 import org.testng.annotations.Test;
 
 import base.BaseClass;
@@ -9,17 +7,6 @@ import pages.IndexPage;
 import pages.MyAccount;
 
 public class TestCases extends BaseClass {
-
-	Logger logger = LogManager.getLogger("TestCases");
-
-//	IndexPage indexPage;
-//	MyAccount myAccount;
-//
-//	@Initialized
-//	public TestCases() {
-//		indexPage = new IndexPage(driver);
-//		myAccount = new MyAccount(driver);
-//	}
 
 	@Test
 	public void verifyRegisterAndLogIn() {
@@ -36,6 +23,12 @@ public class TestCases extends BaseClass {
 		myAccount.clickSubmitButton();
 		logger.info("Successfully Clicked On The Submit Button.");
 
+		String pageTitle = "Login - My Shop";
+		if (driver.getTitle().equalsIgnoreCase(pageTitle)) {
+			logger.info("Successfully Verify The Page Title of login My shop page.");
+		} else {
+			logger.error("Failled to Verify The Page Title of login My shop page.");
+		}
 	}
 
 }

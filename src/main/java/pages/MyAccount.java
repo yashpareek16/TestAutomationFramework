@@ -5,10 +5,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class MyAccount {
+import basePage.BasePage;
+
+public class MyAccount extends BasePage {
 
 	// 1. Create Object Of WebDriver
-	WebDriver lDriver;
+	// WebDriver lDriver;
 
 	// Initialize web driver instance in constructor
 	public MyAccount(WebDriver rDriver) {

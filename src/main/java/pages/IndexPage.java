@@ -5,10 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class IndexPage {
+import basePage.BasePage;
 
-	// 1. Create Object Of WebDriver
-	WebDriver lDriver;
+public class IndexPage extends BasePage {
 
 	// Initialize web driver instance in constructor
 	public IndexPage(WebDriver rDriver) {
