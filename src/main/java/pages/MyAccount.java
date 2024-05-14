@@ -9,9 +9,6 @@ import basePage.BasePage;
 
 public class MyAccount extends BasePage {
 
-	// 1. Create Object Of WebDriver
-	// WebDriver lDriver;
-
 	// Initialize web driver instance in constructor
 	public MyAccount(WebDriver rDriver) {
 		lDriver = rDriver;
@@ -27,7 +24,7 @@ public class MyAccount extends BasePage {
 	WebElement submitButton;
 
 	/**
-	 * This Method will enter given emailid in the create email id cell
+	 * This Method will enter given email Id in the create email id cell
 	 * 
 	 * @param emailId you want to enter in create email id cell
 	 */

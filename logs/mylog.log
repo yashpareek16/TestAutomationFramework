@@ -1,4 +1,9 @@
-00:04:20.808 [main] INFO  TestAutomationFrameWork - Successfully clicked on the signIn.
-00:04:21.153 [main] INFO  TestAutomationFrameWork - Successfully Entered the Email Id.
-00:04:21.318 [main] INFO  TestAutomationFrameWork - Successfully Clicked On The Submit Button.
-00:04:21.337 [main] INFO  TestAutomationFrameWork - Successfully Verify The Page Title of login My shop page.
+23:32:05.647 [main] INFO  TestAutomationFrameWork - Successfully Verify the index page title.
+23:32:06.658 [main] INFO  TestAutomationFrameWork - Successfully clicked on the signIn.
+23:32:06.667 [main] INFO  TestAutomationFrameWork - Successfully Verify the login page title.
+23:32:06.759 [main] INFO  TestAutomationFrameWork - Successfully Entered the Email Id.
+23:32:06.836 [main] INFO  TestAutomationFrameWork - Successfully Clicked On The Submit Button.
+23:32:06.866 [main] INFO  TestAutomationFrameWork - Successfully Verify the Register user page title.
+23:32:08.648 [main] INFO  TestAutomationFrameWork - Successfully Entered the All user Details
+23:32:11.210 [main] INFO  TestAutomationFrameWork - Successfully  click on the submit button.
+23:32:11.238 [main] INFO  TestAutomationFrameWork - Successfully Verify the User Name
