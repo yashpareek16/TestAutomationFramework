@@ -4,14 +4,25 @@ import java.security.SecureRandom;
 
 public class RandomStringGenerator {
 
+	// ----------------String type enum if you want to generate numeric type string
+	// select 'N', for alphabatic type string select 'A' and for alphanumeric type
+	// string select 'AN'
 	public enum TYPE {
 		N, A, AN;
 	}
 
+	// -------------assign value to variables of contants type
 	private static final String NUMERIC = "0123456789";
 	private static final String ALPHA = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	private static final String ALPHANUMERIC = ALPHA + NUMERIC;
 
+	/**
+	 * This Method will generate randomString bases on given length and type
+	 * 
+	 * @param length
+	 * @param type   select from enum
+	 * @return random string
+	 */
 	public static String generateRandomString(int length, TYPE type) {
 
 		StringBuilder stringBuilder = new StringBuilder(length);
