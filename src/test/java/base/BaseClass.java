@@ -4,7 +4,6 @@ import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
 
-import org.apache.commons.compress.archivers.sevenz.SevenZOutputFile;
 import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -59,7 +58,7 @@ public class BaseClass {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
 //----------------initialize the logger object----------------
-		logger = LogManager.getLogger("TestAutomationFrameWork");
+		logger = LogManager.getLogger(this.getClass());
 	}
 
 	@AfterClass
@@ -80,7 +79,7 @@ public class BaseClass {
 
 		File src = screenshot.getScreenshotAs(OutputType.FILE);
 
-		File dest = new File(System.getProperty("user.dir" + "//Screenshots//" + testName + ".png"));
+		File dest = new File(System.getProperty("user.dir") + "//Screenshots//" + testName + ".png");
 
 		try {
 			FileUtils.copyFile(src, dest);

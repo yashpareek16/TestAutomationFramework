@@ -13,19 +13,18 @@
 		</Console>
 
 		<!-- File Appender -->
-		<File name="File" fileName="${log-path}/mylog.log" append="true">
+		<RollingFile name="File" fileName="${log-path}/mylog.log"
+			append="true">
 			<PatternLayout
 				pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
-		</File>
+		</RollingFile>
 	</Appenders>
 
 	<Loggers>
-		<!-- Root Logger -->
-		<logger name="TestAutomationFrameWork" level="INFO"
-			additivity="true">
+		<!-- Root Logger <logger name="TestAutomationFrameWork" level="INFO" additivity="true"> 
+			</logger> -->
+		<root level="Info">
 			<AppenderRef ref="Console" />
-		</logger>
-		<root level="INFO">
 			<AppenderRef ref="File" />
 		</root>
 	</Loggers>

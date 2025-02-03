@@ -13,7 +13,7 @@ import utilities.RandomStringGenerator.TYPE;
 
 public class TestCases extends BaseClass {
 
-	@Test
+	@Test(enabled = true)
 	public void verifyRegisterAndLogIn() {
 //---------------------create objects of page classes--------------------------
 		IndexPage indexPage = new IndexPage(driver);
@@ -62,6 +62,34 @@ public class TestCases extends BaseClass {
 		assertEquals(userVerification.toLowerCase(), registerUser.userName.getText().toLowerCase());
 		logger.info("Successfully Verify the User Name");
 
+	}
+
+	@Test(enabled = true)
+	public void loginUser() {
+		IndexPage indexPage = new IndexPage(driver);
+		MyAccount myAccount = new MyAccount(driver);
+		RegisterUser registerUser = new RegisterUser(driver);
+
+		String email = "Vymy@MGRb.com";
+		String pass = "1234Y@sh";
+		String firstName = "Vymy";
+		String lastName = "MGRb";
+
+		indexPage.clickOnSignIn();
+		logger.info("Successfully clicked on the signIn.");
+
+		myAccount.enterLogInEmailId(email);
+		logger.info("Successfully entered email id.");
+
+		myAccount.enterLogInPassword(pass);
+		logger.info("Successfully entered password.");
+
+		myAccount.clickLogInButton();
+		logger.info("Successfully clicked on the login button.");
+
+		String userVerification = firstName + " " + lastName;
+		assertEquals(userVerification.toLowerCase(), registerUser.userName.getText().toLowerCase());
+		logger.info("Successfully Verify the User Name");
 	}
 
 }
